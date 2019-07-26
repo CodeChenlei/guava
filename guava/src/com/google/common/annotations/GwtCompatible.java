@@ -14,11 +14,7 @@
 
 package com.google.common.annotations;
 
-import java.lang.annotation.Documented;
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 
 /**
  * The presence of this annotation on a type indicates that the type may be used with the <a
@@ -64,23 +60,23 @@ import java.lang.annotation.Target;
 @GwtCompatible
 public @interface GwtCompatible {
 
-  /**
-   * When {@code true}, the annotated type or the type of the method return value is GWT
-   * serializable.
-   *
-   * @see <a href=
-   *     "http://code.google.com/webtoolkit/doc/latest/DevGuideServerCommunication.html#DevGuideSerializableTypes">
-   *     Documentation about GWT serialization</a>
-   */
-  boolean serializable() default false;
+	/**
+	 * When {@code true}, the annotated type or the type of the method return value is GWT
+	 * serializable.
+	 *
+	 * @see <a href=
+	 *     "http://code.google.com/webtoolkit/doc/latest/DevGuideServerCommunication.html#DevGuideSerializableTypes">
+	 *     Documentation about GWT serialization</a>
+	 */
+	boolean serializable() default false;
 
-  /**
-   * When {@code true}, the annotated type is emulated in GWT. The emulated source (also known as
-   * super-source) is different from the implementation used by the JVM.
-   *
-   * @see <a href=
-   *     "http://code.google.com/webtoolkit/doc/latest/DevGuideOrganizingProjects.html#DevGuideModules">
-   *     Documentation about GWT emulated source</a>
-   */
-  boolean emulated() default false;
+	/**
+	 * When {@code true}, the annotated type is emulated in GWT. The emulated source (also known as
+	 * super-source) is different from the implementation used by the JVM.
+	 *
+	 * @see <a href=
+	 *     "http://code.google.com/webtoolkit/doc/latest/DevGuideOrganizingProjects.html#DevGuideModules">
+	 *     Documentation about GWT emulated source</a>
+	 */
+	boolean emulated() default false;
 }
